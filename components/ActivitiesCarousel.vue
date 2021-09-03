@@ -10,7 +10,7 @@
       <v-carousel-item
         v-for="activity in activities"
         :key="activity._id"
-        :to="`/activities/${activity.slug.current}`"
+        :to="`/recent/${activity.slug.current}`"
         nuxt
       >
         <div class="slide-container">

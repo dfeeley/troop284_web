@@ -26,7 +26,6 @@ export default {
 
   methods: {
     handleScroll () {
-      console.log(window.scrollY)
       this.logoHeight = window.scrollY === 0 ? 120 : 56
     }
   },

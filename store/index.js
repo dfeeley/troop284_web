@@ -10,7 +10,9 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ dispatch }) {
-    console.log('In nuxtServerInit')
-    await dispatch('activities/load')
+    await Promise.all([
+      dispatch('frontpage/load'),
+      dispatch('activities/load'),
+    ])
   }
 }

@@ -47,6 +47,30 @@ const SanityService = {
     return client.fetch(query)
   },
 
+  fetchFrontPageSections: () => {
+    const query = groq`*[_type == "frontPageSection"]{
+      _id,
+      name,
+      slug,
+      image,
+      imageQuote,
+      headingImage,
+      heading,
+      body,
+      components,
+    }`;
+    return client.fetch(query)
+
+
+  },
+
+  fetchFrontPageContent: () => {
+    const query = groq`*[_type == "frontPage" && status == "final"]{
+      sections,
+    }`;
+    return client.fetch(query)
+  },
+
   imageUrl(image, width=undefined, height=undefined, auto='format', fit='max') {
     return builder.image(image).size(width, height).auto(auto).fit(fit).url()
   }

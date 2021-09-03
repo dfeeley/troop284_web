@@ -34,7 +34,7 @@ export default {
   flex-wrap: wrap;
   padding: 10px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .activity-container > *:not(:first-child) {

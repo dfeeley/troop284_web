@@ -1,0 +1,40 @@
+<template>
+  <div>
+    <div class="recentactivities__thumbnails">
+      <ActivityThumbnail
+        v-for="activity in activities"
+        :key="activity._id"
+        :activity="activity"
+        :show-name="true"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import {mapState} from 'vuex'
+
+export default {
+  computed: {
+    ...mapState('activities', ['activities']),
+
+  },
+
+  methods: {
+
+  },
+}
+</script>
+
+<style scoped>
+.recentactivities__thumbnails {
+  display: flex;
+  flex-direction: columns;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+</style>

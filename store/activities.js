@@ -22,14 +22,12 @@ export const mutations = {
 
 export const actions = {
   async load({commit}) {
-    console.log('In Vuex activities/load action')
     const activities = await SanityService.fetchActivities()
     const showcases = await SanityService.fetchActivityShowcases()
     const pageContent = await SanityService.fetchActivityPageContent()
     commit('SET_ACTIVITIES', activities)
     commit('SET_SHOWCASES', showcases)
     commit('SET_PAGE_CONTENT', pageContent[0])
-    console.log('All done with activities/load')
   }
 }
 

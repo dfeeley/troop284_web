@@ -18,10 +18,10 @@
 
     <v-toolbar-items class="toolbar-items-container">
       <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/newindex">New</NuxtLink>
-      <NuxtLink to="/newactivities">New Activities</NuxtLink>
       <NuxtLink to="/activities">Activities</NuxtLink>
-      <NuxtLink to="/activities">Contact</NuxtLink>
+      <NuxtLink to="/recent">Recent</NuxtLink>
+      <NuxtLink to="/recent">Upcoming</NuxtLink>
+      <a href="mailto:davidpfeeley@gmail.com" target="_blank">Contact</a>
     </v-toolbar-items>
 
   </v-app-bar>
