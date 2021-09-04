@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <h3 v-if="title">{{ title }}</h3>
     <iframe 
       :width="width" 
       :height="height" 
@@ -7,6 +9,8 @@
       allowfullscreen
       :src="iframeSrc"
     />
+  
+  </div>
 </template>
 
 <script>
@@ -31,6 +35,11 @@ export default {
       type: Number,
       required: false,
       default: 450
+    },
+    title: {
+      type: String,
+      required: false,
+      default: null,
     },
   },
 

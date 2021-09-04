@@ -45,10 +45,11 @@ export default {
   align-items: center;
   margin: 10px 10px;
   max-width: 250px;
+  padding: 10px 10px;
 }
 
 .activitythumbnail__container img {
-  border-radius: 20px;
+  border-radius: 60px;
 }
 
 .activitythumbnail__container a {
@@ -56,11 +57,10 @@ export default {
 }
 
 .activitythumbnail__title {
-  color: var(--activityOverlay);
+  color: var(--heading);
   font-weight: 700;
-  margin-top: -70px;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 </style>

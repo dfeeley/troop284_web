@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <h1>Our Recent Pack Activities</h1>
-
-    <ActivitiesCarousel :activities="activities"/>
+  <div class="container">
+    <h2>Our Recent Pack Activities</h2>
 
     <div class="activity-container">
       <ActivityThumbnail
@@ -11,6 +9,12 @@
         :activity="activity"
       />
     </div>
+
+    <MapOfActivities
+      :activities="activities"
+      title="By Location"
+    />
+
   </div>
 </template>
 

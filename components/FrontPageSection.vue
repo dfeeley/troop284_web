@@ -20,9 +20,9 @@
         />
       </div>
       <div v-if="section.heading" class="section__body__heading">
-        <h2>
+        <h1>
           {{ section.heading }}
-        </h2>
+        </h1>
       </div>
       <div v-if="section.body" class="section__body__body">
         <SanityContent :blocks="section.body"/>

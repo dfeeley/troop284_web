@@ -20,8 +20,9 @@
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/activities">Activities</NuxtLink>
       <NuxtLink to="/recent">Recent</NuxtLink>
-      <NuxtLink to="/recent">Upcoming</NuxtLink>
+      <NuxtLink to="/upcoming">Upcoming</NuxtLink>
       <a href="mailto:davidpfeeley@gmail.com" target="_blank">Contact</a>
+      <NuxtLink to="/testbed">Testbed</NuxtLink>
     </v-toolbar-items>
 
   </v-app-bar>

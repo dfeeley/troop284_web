@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3 v-if="title">{{title}}</h3>
     <client-only>
       <v-gallery v-if="images" :id="`gallery-${idx}`" :images="galleryImages" :index="index" @close="index = null"></v-gallery>
     </client-only>
@@ -33,6 +34,11 @@ export default {
     idx: {
       type: Number,
       required: true,
+    },
+    title: {
+      type: String,
+      required: false,
+      default: null,
     },
   },
 

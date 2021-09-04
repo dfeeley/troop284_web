@@ -26,6 +26,20 @@ const SanityService = {
     return client.fetch(query)
   },
 
+  fetchUpcoming: () => {
+    const query = groq`*[_type == "upcoming"]{
+      _id,
+      name,
+      slug,
+      image,
+      body,
+      date,
+      location,
+    } | order(date asc)`;
+
+    return client.fetch(query)
+  },
+
   fetchActivityShowcases: () => {
     const query = groq`*[_type == "activityShowcase"]{
       _id,

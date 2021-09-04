@@ -1,7 +1,7 @@
 <template>
   <div v-if="activity" class="container">
 
-    <h2>{{ activity.name }}</h2>
+    <h3>{{ activity.name }}</h3>
 
     <MySanityImage
       :image="activity.image"
@@ -9,13 +9,6 @@
     />
 
     <SanityContent :blocks="activity.body" class="body__content"/>
-
-    <SanityImageGallery
-      v-if="activity.otherimages"
-      title="Image Gallery"
-      :images="activity.otherimages"
-      :idx="1"
-    />
 
     <MapDisplay
       v-if="activity.location"
@@ -28,16 +21,12 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-
 export default {
-  computed: {
-    ...mapGetters('activities', ['activityForSlug']),
-
-    activity() {
-      return this.activityForSlug(this.$route.params.slug)
+  props: {
+    activity: {
+      type: Object,
+      required: true,
     },
-
-  }
+  },
 }
 </script>

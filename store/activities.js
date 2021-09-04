@@ -4,11 +4,16 @@ export const state = () => ({
   activities: [],
   showcases: [],
   pageContent: null,
+  upcoming: [],
 })
 
 export const mutations = {
   SET_ACTIVITIES(state, activities) {
     state.activities = activities
+  },
+
+  SET_UPCOMING(state, upcoming) {
+    state.upcoming = upcoming
   },
 
   SET_SHOWCASES(state, showcases) {
@@ -25,9 +30,11 @@ export const actions = {
     const activities = await SanityService.fetchActivities()
     const showcases = await SanityService.fetchActivityShowcases()
     const pageContent = await SanityService.fetchActivityPageContent()
+    const upcoming = await SanityService.fetchUpcoming()
     commit('SET_ACTIVITIES', activities)
     commit('SET_SHOWCASES', showcases)
     commit('SET_PAGE_CONTENT', pageContent[0])
+    commit('SET_UPCOMING', upcoming)
   }
 }
 

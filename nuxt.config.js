@@ -33,6 +33,7 @@ export default {
   plugins: [
     '~plugins/vuetify.js',
     '~plugins/vue-gallery.client.js',
+    '~plugins/google-maps.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,7 +52,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    vendor: ['vuetify']
+    vendor: ['vuetify'],
+    transpile: [/^vue2-google-maps($|\/)/],
   },
 
   sanity: {

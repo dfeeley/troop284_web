@@ -21,6 +21,7 @@
     "nuxt": "^2.15.7",
     "sanity-blocks-vue-component": "^1.0.1",
     "vue-gallery": "^2.0.1",
+    "vue2-google-maps": "^0.10.7",
     "vuetify": "^2.5.8"
   },
   "devDependencies": {

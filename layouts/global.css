@@ -9,17 +9,54 @@ html {
     font-family: "Maven Pro";
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--header);
-  text-transform: uppercase;
-  font-size: 48px;
   font-weight: 700;
+}
+
+h1 {
+  font-size: 48px;
   margin-top: 36px;
   margin-bottom: 36px;
 }
 
+h2 {
+  font-size: 32px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .body__content {
+  margin-top: 20px;
   font-size: 20px;
   line-height: 31px;
+}
+
+.img__size__xs {
+  max-width: 300px;
+}
+.img__size__sm {
+  max-width: 540px;
+}
+.img__size__md {
+  max-width: 800px;
+}
+.img__size__lg {
+  max-width: 1200px;
+}
+.img__size__xl {
+  max-width: 1200px;
 }
 
