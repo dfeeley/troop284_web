@@ -97,9 +97,10 @@ export default {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
+  justify-items: center;
   grid-gap: 20px;
   max-width: 75%;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 .section__body__image {
@@ -114,8 +115,6 @@ export default {
 }
 
 .section__body__body {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
   font-size: 20px;
   line-height: 31px;
   font-family: "Open Sans";
@@ -124,6 +123,15 @@ export default {
 .section__components {
   margin-bottom: 30px;
 } 
+
+@media (max-width: 600px) {
+  .section__body {
+    grid-template-columns: 1fr;
+  }
+  .section__image__quoteoverlay {
+    font-size: 14px;
+  }
+}
 
 
 </style>

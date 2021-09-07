@@ -1,15 +1,15 @@
 import SanityService from '@/services/sanity.service'
 
 export const state = () => ({
-  activities: [],
+  recent: [],
   showcases: [],
   pageContent: null,
   upcoming: [],
 })
 
 export const mutations = {
-  SET_ACTIVITIES(state, activities) {
-    state.activities = activities
+  SET_RECENT(state, recent) {
+    state.recent = recent
   },
 
   SET_UPCOMING(state, upcoming) {
@@ -27,11 +27,11 @@ export const mutations = {
 
 export const actions = {
   async load({commit}) {
-    const activities = await SanityService.fetchActivities()
+    const recent = await SanityService.fetchRecent()
     const showcases = await SanityService.fetchActivityShowcases()
     const pageContent = await SanityService.fetchActivityPageContent()
     const upcoming = await SanityService.fetchUpcoming()
-    commit('SET_ACTIVITIES', activities)
+    commit('SET_RECENT', recent)
     commit('SET_SHOWCASES', showcases)
     commit('SET_PAGE_CONTENT', pageContent[0])
     commit('SET_UPCOMING', upcoming)
@@ -39,8 +39,8 @@ export const actions = {
 }
 
 export const getters = {
-  activityForSlug: (state) => (slug) => {
-    return state.activities.find(obj => obj.slug.current === slug)
+  recentForSlug: (state) => (slug) => {
+    return state.recent.find(obj => obj.slug.current === slug)
   },
 
   showcaseForId: (state) => (id) => {

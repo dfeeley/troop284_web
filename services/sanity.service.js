@@ -4,7 +4,7 @@ import imageUrlBuilder from '@sanity/image-url'
 
 const client = sanityClient({
   projectId: "garjbqnq",
-  dataset: "production",
+  dataset: "live",
   useCdn: true,
   apiVersion: "2021-03-25"
 });
@@ -12,8 +12,8 @@ const client = sanityClient({
 const builder = imageUrlBuilder(client)
 
 const SanityService = {
-  fetchActivities: () => {
-    const query = groq`*[_type == "activity"]{
+  fetchRecent: () => {
+    const query = groq`*[_type == "recent"]{
       _id,
       name,
       slug,

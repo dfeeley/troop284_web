@@ -22,7 +22,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('activities', ['activities']),
+    ...mapState('activities', ['recent']),
   },
   methods: {
 

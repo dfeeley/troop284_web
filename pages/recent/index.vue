@@ -4,14 +4,14 @@
 
     <div class="activity-container">
       <ActivityThumbnail
-        v-for="activity in activities"
+        v-for="activity in recent"
         :key="activity._id"
         :activity="activity"
       />
     </div>
 
     <MapOfActivities
-      :activities="activities"
+      :activities="recent"
       title="By Location"
     />
 
@@ -25,7 +25,7 @@ export default {
   name: 'Activities',
 
   computed: {
-    ...mapState('activities', ['activities']),
+    ...mapState('activities', ['recent']),
 
   },
 

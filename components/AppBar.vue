@@ -1,31 +1,64 @@
 <template>
-  <v-app-bar
-    ref="appbar"
-    app
-    color="white"
-    light
-    prominent
-    shrink-on-scroll
-    class="myappbar"
-  >
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+  <div>
+    <v-app-bar
+      ref="appbar"
+      app
+      color="white"
+      light
+      :prominent="!isMobile"
+      :shrink-on-scroll="!isMobile"
+    >
+      <v-app-bar-nav-icon v-if="isMobile" @click="drawer = true"></v-app-bar-nav-icon>
 
-    <div class="logo-container">
-      <Logo/>
-    </div>
+      <div class="logo-container" @click="$router.push('/')">
+        <Logo :mobile="isMobile"/>
+      </div>
 
-    <v-spacer></v-spacer>
+      <v-spacer v-if="!isMobile"></v-spacer>
 
-    <v-toolbar-items class="toolbar-items-container">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/activities">Activities</NuxtLink>
-      <NuxtLink to="/recent">Recent</NuxtLink>
-      <NuxtLink to="/upcoming">Upcoming</NuxtLink>
-      <a href="mailto:davidpfeeley@gmail.com" target="_blank">Contact</a>
-      <NuxtLink to="/testbed">Testbed</NuxtLink>
-    </v-toolbar-items>
+      <v-toolbar-items v-if="!isMobile" class="toolbar-items-container">
+        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/activities">Activities</NuxtLink>
+        <NuxtLink to="/recent">Recent</NuxtLink>
+        <NuxtLink to="/upcoming">Upcoming</NuxtLink>
+        <a href="mailto:davidpfeeley@gmail.com" target="_blank">Contact</a>
+      </v-toolbar-items>
 
-  </v-app-bar>
+    </v-app-bar>
+      <v-navigation-drawer
+          v-model="drawer"
+          absolute
+          temporary
+          clipped
+        >
+        <v-list
+          nav
+          dense
+        >
+          <v-list-item-group
+            active-class="primary"
+          >
+            <v-list-item to="/">
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item to="/activities">
+              <v-list-item-title>Activities</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item to="/recent">
+              <v-list-item-title>Recent</v-list-item-title>
+            </v-list-item>
+            <v-list-item to="upcoming">
+              <v-list-item-title>Upcoming</v-list-item-title>
+            </v-list-item>
+            <v-list-item href="mailto:davidpfeeley@gmail.com" target="_blank">
+              <v-list-item-title>Contact</v-list-item-title>
+            </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
 </template>
 
 <script>
@@ -34,13 +67,18 @@ export default {
 
   data () {
     return {
-
+      drawer: false,
     }
   },
+
   computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+
     isScrolled() {
       return true
-    }
+    },
 
   },
 }
@@ -50,12 +88,16 @@ export default {
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  justify-self: center;
 }
+
 .toolbar-items-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .toolbar-items-container a {
   font-family: "Maven Pro";
   text-decoration: none;
@@ -64,6 +106,12 @@ export default {
   text-transform: uppercase;
   font-weight: 700;
   padding: 0px 15px
+}
+
+@media (max-width: 600px) {
+  .logo-container {
+    width: calc(100vw - 112px);
+  }
 }
 
 </style>

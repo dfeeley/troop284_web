@@ -2,7 +2,7 @@
   <div>
     <div class="recentactivities__thumbnails">
       <ActivityThumbnail
-        v-for="activity in activities"
+        v-for="activity in recent"
         :key="activity._id"
         :activity="activity"
         :show-name="true"
@@ -16,7 +16,7 @@ import {mapState} from 'vuex'
 
 export default {
   computed: {
-    ...mapState('activities', ['activities']),
+    ...mapState('activities', ['recent']),
 
   },
 

@@ -4,9 +4,27 @@
 
 <script>
 export default {
+  props: {
+    mobile: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+  },
+
   data () {
     return {
-      logoHeight: 120
+      scrolled: false,
+    }
+  },
+
+  computed: {
+    logoHeight() {
+      if(this.mobile || this.scrolled) {
+        return 56 
+      } else {
+        return 120 
+      }
     }
   },
 
@@ -26,7 +44,7 @@ export default {
 
   methods: {
     handleScroll () {
-      this.logoHeight = window.scrollY === 0 ? 120 : 56
+      this.scrolled = window.scrollY > 0
     }
   },
 }

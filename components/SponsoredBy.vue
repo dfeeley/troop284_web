@@ -30,6 +30,7 @@ export default {
 .two-column {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   font-size: 32px;

@@ -32,10 +32,10 @@ import {mapGetters} from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters('activities', ['activityForSlug']),
+    ...mapGetters('activities', ['recentForSlug']),
 
     activity() {
-      return this.activityForSlug(this.$route.params.slug)
+      return this.recentForSlug(this.$route.params.slug)
     },
 
   }
