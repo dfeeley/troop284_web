@@ -21,7 +21,7 @@
         <NuxtLink to="/activities">Activities</NuxtLink>
         <NuxtLink to="/recent">Recent</NuxtLink>
         <NuxtLink to="/upcoming">Upcoming</NuxtLink>
-        <a href="mailto:davidpfeeley@gmail.com" target="_blank">Contact</a>
+        <a href="mailto:troop284scouting@gmail.com" target="_blank">Contact</a>
       </v-toolbar-items>
 
     </v-app-bar>
@@ -52,7 +52,7 @@
             <v-list-item to="upcoming">
               <v-list-item-title>Upcoming</v-list-item-title>
             </v-list-item>
-            <v-list-item href="mailto:davidpfeeley@gmail.com" target="_blank">
+            <v-list-item href="mailto:troop284scouting@gmail.com" target="_blank">
               <v-list-item-title>Contact</v-list-item-title>
             </v-list-item>
         </v-list-item-group>

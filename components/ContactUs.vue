@@ -1,7 +1,7 @@
 <template>
   <div class="contactus__container">
     <div class="contactus__container__btn">
-      <v-btn color="primary" href="mailto:davidpfeeley@gmail.com" target="_blank">CONTACT US TO LEARN MORE</v-btn>
+      <v-btn color="primary" href="mailto:troop284scouting@gmail.com" target="_blank">CONTACT US TO LEARN MORE</v-btn>
     </div>
   </div>
 </template>
