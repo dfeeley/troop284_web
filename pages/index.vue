@@ -12,6 +12,10 @@
 import { mapState, mapGetters } from 'vuex'
 
 export default {
+  head: {
+    titleTemplate: '%s - Home'
+  },
+
   computed: {
     ...mapState('frontpage', ['pageContent']),
     ...mapGetters('frontpage', ['sectionForId']),

@@ -43,6 +43,10 @@ export const getters = {
     return state.recent.find(obj => obj.slug.current === slug)
   },
 
+  upcomingForSlug: (state) => (slug) => {
+    return state.upcoming.find(obj => obj.slug.current === slug)
+  },
+
   showcaseForId: (state) => (id) => {
     return state.showcases.find(obj => obj._id === id)
   },

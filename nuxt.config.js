@@ -4,15 +4,27 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Troop284',
+    title: 'Troop 284, Lafayette',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+
+      { hid: 'description', name: 'description', content: 'We are a newly established Boy Scout Troop in Lafayette CA.  We embrace the ideals of Scouting while advancing young leaders of high moral character emphasizing citizenship training, character development, and personal fitness.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: "og:site_name", content: "TROOP 284, LAFAYETTE" },
+      { name: "og:title", content: "TROOP 284, LAFAYETTE" },
+      { name: "og:description", content: "We are a newly established Boy Scout Troop in Lafayette CA.  We embrace the ideals of Scouting while advancing young leaders of high moral character emphasizing citizenship training, character development, and personal fitness." },
+      { name: "og:url", content: "https://www.bsatroop284.org/" },
+      { name: "title", content: "Boy Scout Troop 284 - Lafayette, CA" },
+      { name: "description", content: "We are a newly established Boy Scout Troop in Lafayette CA.  We embrace the ideals of Scouting while advancing young leaders of high moral character emphasizing citizenship training, character development, and personal fitness." },
+      { name: "og:type", content: "website" },
+      { name: "og:title", content: "Boy Scout Troop 284 - Lafayette, CA" },
+      { name: "twitter:title", content: "Boy Scout Troop 284 - Lafayette, CA" },
+      { name: "twitter:description", content: "We are a newly established Boy Scout Troop in Lafayette CA.  We embrace the ideals of Scouting while advancing young leaders of high moral character emphasizing citizenship training, character development, and personal fitness." },
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

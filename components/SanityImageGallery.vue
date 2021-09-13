@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h3 v-if="title">{{title}}</h3>
+    <h3 v-if="title">
+      {{title}}
+    </h3>
+
+    <PhotoAlbumLink :link="album"/>
+
     <client-only>
       <v-gallery v-if="images" :id="`gallery-${idx}`" :images="galleryImages" :index="index" @close="index = null"></v-gallery>
     </client-only>
@@ -40,6 +45,11 @@ export default {
       required: false,
       default: null,
     },
+    album: {
+      type: String,
+      required: false,
+      default: null,
+    },
   },
 
   data () {
@@ -66,6 +76,7 @@ export default {
   justify-content: center;
   gap: 10px;
   margin-bottom: 36px;
+  margin-bottom: 18px;
 }
 
 @media (max-width: 400px) {

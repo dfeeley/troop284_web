@@ -10,14 +10,6 @@
 
     <SanityContent :blocks="activity.body" class="body__content"/>
 
-    <SanityImageGallery
-      v-if="activity.otherimages"
-      title="Image Gallery"
-      :album="activity.photoalbum"
-      :images="activity.otherimages"
-      :idx="1"
-    />
-
     <MapDisplay
       v-if="activity.location"
       title="Location"
@@ -33,10 +25,10 @@ import {mapGetters} from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters('activities', ['recentForSlug']),
+    ...mapGetters('activities', ['upcomingForSlug']),
 
     activity() {
-      return this.recentForSlug(this.$route.params.slug)
+      return this.upcomingForSlug(this.$route.params.slug)
     },
 
   }

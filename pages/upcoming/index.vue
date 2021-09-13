@@ -1,18 +1,19 @@
 <template>
   <div class="container">
-    <h2>Our Recent Pack Activities</h2>
+    <h2>Our Upcoming Pack Activities</h2>
 
     <div class="activity-container">
       <ActivityThumbnail
-        v-for="activity in recent"
+        v-for="activity in upcoming"
         :key="activity._id"
         :activity="activity"
+        activity-type="upcoming"
       />
     </div>
 
     <MapOfActivities
-      :activities="recent"
-      activityType="recent"
+      :activities="upcoming"
+      activity-type="upcoming"
       title="By Location"
     />
 
@@ -24,7 +25,7 @@ import {mapState} from 'vuex'
 
 export default {
   head: {
-    titleTemplate: '%s - Recent'
+    titleTemplate: '%s - Upcoming'
   },
 
   computed: {

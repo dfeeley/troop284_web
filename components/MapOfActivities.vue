@@ -7,10 +7,11 @@
       :zoom="8"
       style="width:100%;  height: 555px;">
       <gmap-marker
-        v-for="(loc, index) in locations"
+        v-for="(loc, index) in activityLocations"
         :key="index"
         :position="loc"
         :title="loc.label"
+        :icon="icon"
         :label="{text: loc.label, color: '#3e4c21', fontSize: '18px'}"
         :animation="2"
         @click="handleClick(loc)"
@@ -29,6 +30,13 @@ export default {
       type: Array,
       required: true,
     },
+
+    activityType: {
+      type: String,
+      required: false,
+      default: "recent"
+    },
+
     title: {
       type: String,
       required: false,
@@ -40,27 +48,30 @@ export default {
   data() {
     return {
       center: { 
-          lat: 37.8886203,
-          lng: -122.1342418,
+          lat: 38.5816,
+          lng: -121.4944
         },
 
     };
   },
 
   computed: {
-    locations() {
+    activityLocations() {
       return this.activities
         .filter(obj => obj.location)
         .map(obj => {
           return {lat: obj.location.lat, lng: obj.location.lng, label: obj.name, slug: obj.slug}
         })
     },
+    icon() {
+      return this.activityType === 'recent' ?  "http://maps.google.com/mapfiles/ms/icons/red-dot.png" : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    }
   },
  
   methods: {
     handleClick(loc) {
-      this.$router.push(`/recent/${loc.slug.current}`)
-    }
+      this.$router.push(`/${this.activityType}/${loc.slug.current}`)
+    },
   }
 };
 </script>

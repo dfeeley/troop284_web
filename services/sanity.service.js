@@ -21,6 +21,7 @@ const SanityService = {
       body,
       date,
       location,
+      photoalbum,
       otherimages,
     } | order(date desc)`;
     return client.fetch(query)

@@ -24,6 +24,10 @@ import { mapState, mapGetters } from 'vuex'
 import SanityService from '@/services/sanity.service'
 
 export default {
+  head: {
+    titleTemplate: '%s - Activities'
+  },
+
   computed: {
     ...mapState('activities', ['pageContent', 'showcases']),
     ...mapGetters('activities', ['showcaseForId']),
