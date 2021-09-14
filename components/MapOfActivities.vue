@@ -11,8 +11,9 @@
         :key="index"
         :position="loc"
         :title="loc.label"
-        :icon="icon"
-        :label="{text: loc.label, color: '#3e4c21', fontSize: '18px'}"
+        :icon="icon(loc)"
+        :xlabel="{text: loc.label, color: '#3e4c21', fontSize: '18px'}"
+        :label="{text: loc.label, color: 'black', fontSize: '18px'}"
         :animation="2"
         @click="handleClick(loc)"
       ></gmap-marker>
@@ -60,17 +61,21 @@ export default {
       return this.activities
         .filter(obj => obj.location)
         .map(obj => {
-          return {lat: obj.location.lat, lng: obj.location.lng, label: obj.name, slug: obj.slug}
+          return {lat: obj.location.lat, lng: obj.location.lng, label: obj.name, slug: obj.slug, pin: obj.mapPin}
         })
     },
-    icon() {
-      return this.activityType === 'recent' ?  "http://maps.google.com/mapfiles/ms/icons/red-dot.png" : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-    }
   },
  
   methods: {
     handleClick(loc) {
       this.$router.push(`/${this.activityType}/${loc.slug.current}`)
+    },
+
+    icon(activity) {
+      return {
+        url: activity.pin ? activity.pin : "http://maps.google.com/mapfiles/ms/icons/red-pushpin.png",
+        labelOrigin: {x: 0, y: -5}
+      }
     },
   }
 };

@@ -22,6 +22,7 @@ const SanityService = {
       date,
       location,
       photoalbum,
+      mapPin,
       otherimages,
     } | order(date desc)`;
     return client.fetch(query)
@@ -36,6 +37,7 @@ const SanityService = {
       body,
       date,
       location,
+      mapPin,
     } | order(date asc)`;
 
     return client.fetch(query)
