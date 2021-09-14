@@ -28,6 +28,7 @@
       <v-navigation-drawer
           v-model="drawer"
           app
+          temporary
         >
         <v-list
           nav
@@ -102,7 +103,6 @@ export default {
   font-family: "Maven Pro";
   text-decoration: none;
   font-size: 16px;
-  color: #999999;
   text-transform: uppercase;
   font-weight: 700;
   padding: 0px 15px

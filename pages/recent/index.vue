@@ -2,17 +2,11 @@
   <div class="container">
     <h2>Our Recent Pack Activities</h2>
 
-    <div class="activity-container">
-      <ActivityThumbnail
-        v-for="activity in recent"
-        :key="activity._id"
-        :activity="activity"
-      />
-    </div>
+    <RecentActivitiesThumbnails/>
 
     <MapOfActivities
       :activities="recent"
-      activityType="recent"
+      activity-type="recent"
       title="By Location"
     />
 
@@ -28,24 +22,9 @@ export default {
   },
 
   computed: {
-    ...mapState('activities', ['recent', 'upcoming']),
+    ...mapState('activities', ['recent']),
 
   },
 
 }
 </script>
-
-<style scoped>
-.activity-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.activity-container > *:not(:first-child) {
-  margin-left: 20px;
-}
-
-</style>

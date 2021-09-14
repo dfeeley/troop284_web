@@ -1,5 +1,5 @@
 <template>
-  <ActivitiesThumbnails :activities="recent"/>
+  <ActivitiesThumbnails :activities="upcoming"/>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('activities', ['recent']),
+    ...mapState('activities', ['upcoming']),
   },
 }
 </script>
