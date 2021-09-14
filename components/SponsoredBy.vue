@@ -31,13 +31,25 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 50px;
   justify-content: space-around;
   align-items: center;
   font-size: 32px;
 }
 
-.two-column > *:not(:first-child) {
+.xtwo-column > *:not(:first-child) {
   margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+  .two-column {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .two-column img {
+    width: calc(100vw - 20px);
+  }
 }
 
 </style>  

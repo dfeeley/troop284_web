@@ -6,6 +6,8 @@
         :key="activity._id"
         :activity="activity"
         :show-name="true"
+        :width="width"
+        :height="height"
       />
     </div>
   </div>
@@ -17,6 +19,15 @@ import {mapState} from 'vuex'
 export default {
   computed: {
     ...mapState('activities', ['recent']),
+
+    width() {
+      return this.$vuetify.breakpoint.smAndDown ? 125 : 250
+    },
+
+    height() {
+      return this.$vuetify.breakpoint.smAndDown ? 125 : 250
+    },
+
   },
 
   methods: {

@@ -27,9 +27,7 @@
     </v-app-bar>
       <v-navigation-drawer
           v-model="drawer"
-          absolute
-          temporary
-          clipped
+          app
         >
         <v-list
           nav
@@ -49,9 +47,11 @@
             <v-list-item to="/recent">
               <v-list-item-title>Recent</v-list-item-title>
             </v-list-item>
+
             <v-list-item to="upcoming">
               <v-list-item-title>Upcoming</v-list-item-title>
             </v-list-item>
+
             <v-list-item href="mailto:troop284scouting@gmail.com" target="_blank">
               <v-list-item-title>Contact</v-list-item-title>
             </v-list-item>

@@ -1,7 +1,7 @@
 <template>
   <div class="activitythumbnail__container">
     <NuxtLink :to="`/${activityType}/${activity.slug.current}`">
-      <MySanityImage :image="activity.image" :width="250" :cdn-height="250" :cdn-width="250" :height="250" fit="max"/>
+      <MySanityImage :image="activity.image" :width="width" :height="height" :cdn-height="250" :cdn-width="250" fit="max"/>
       <div v-if="showName" class="activitythumbnail__title">
         <h4>{{ activity.name }}</h4>
       </div>
@@ -29,6 +29,18 @@ export default {
       type: Boolean,
       required: false,
       default: true,
+    },
+
+    width: {
+      type: Number,
+      required: false,
+      default: 250,
+    },
+
+    height: {
+      type: Number,
+      required: false,
+      default: 250,
     },
   },
 
@@ -69,4 +81,13 @@ export default {
   font-size: 14px;
 }
 
+@media (max-width: 600px) {
+  .activitythumbnail__title {
+    font-size: 10px;
+  }
+
+  .activitythumbnail__container {
+    max-width: 125px;
+  }
+}
 </style>

@@ -127,6 +127,7 @@ export default {
 @media (max-width: 600px) {
   .section__body {
     grid-template-columns: 1fr;
+    text-align: center;
   }
   .section__image__quoteoverlay {
     font-size: 14px;
