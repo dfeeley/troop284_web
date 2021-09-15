@@ -67,7 +67,7 @@ export default {
   padding: 10px 10px;
 }
 
-.activitythumbnail__container img {
+.xactivitythumbnail__container img {
   border-radius: 60px;
 }
 
