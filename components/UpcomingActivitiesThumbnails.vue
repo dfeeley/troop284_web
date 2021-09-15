@@ -1,5 +1,8 @@
 <template>
-  <ActivitiesThumbnails :activities="upcoming"/>
+  <ActivitiesThumbnails 
+    :activities="upcoming"
+    activity-type="upcoming"
+  />
 </template>
 
 <script>

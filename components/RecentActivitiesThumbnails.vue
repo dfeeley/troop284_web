@@ -1,5 +1,8 @@
 <template>
-  <ActivitiesThumbnails :activities="recent"/>
+  <ActivitiesThumbnails 
+    :activities="recent"
+    activity-type="recent"
+  />
 </template>
 
 <script>

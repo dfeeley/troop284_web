@@ -5,6 +5,7 @@
         v-for="activity in activities"
         :key="activity._id"
         :activity="activity"
+        :activity-type="activityType"
         :show-name="true"
         :width="width"
         :height="height"
@@ -18,6 +19,10 @@ export default {
   props: {
     activities: {
       type: Array,
+      required: true,
+    },
+    activityType: {
+      type: String,
       required: true,
     },
   },
