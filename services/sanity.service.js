@@ -16,6 +16,7 @@ const SanityService = {
     const query = groq`*[_type == "recent"]{
       _id,
       name,
+      subtitle,
       slug,
       image,
       body,
@@ -84,6 +85,14 @@ const SanityService = {
   fetchFrontPageContent: () => {
     const query = groq`*[_type == "frontPage" && status == "final"]{
       sections,
+    }`;
+    return client.fetch(query)
+  },
+
+  fetchVerbiage: () => {
+    const query = groq`*[_type == "verbiage" && status == "final"]{
+      recent_preamble,
+      upcoming_preamble,
     }`;
     return client.fetch(query)
   },

@@ -2,6 +2,7 @@
   <div v-if="activity" class="container">
 
     <h2>{{ activity.name }}</h2>
+    <h3 v-if="activity.subtitle">{{ activity.subtitle }}</h3>
 
     <MySanityImage
       :image="activity.image"

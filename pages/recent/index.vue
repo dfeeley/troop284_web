@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <h2>Our Recent Pack Activities</h2>
+    <h2>Recent Troop Activities</h2>
+
+    <div class="recent__content">
+      <SanityContent :blocks="verbiage.recent_preamble"/>
+    </div>
 
     <RecentActivitiesThumbnails/>
 
@@ -23,7 +27,7 @@ export default {
 
   computed: {
     ...mapState('activities', ['recent']),
-
+    ...mapState('verbiage', ['verbiage']),
   },
 
 }

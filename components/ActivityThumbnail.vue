@@ -4,6 +4,7 @@
       <MySanityImage :image="activity.image" :width="width" :height="height" :cdn-height="250" :cdn-width="250" fit="max"/>
       <div v-if="showName" class="activitythumbnail__title">
         <h4>{{ activity.name }}</h4>
+        <h4>{{ activity.subtitle }}</h4>
       </div>
     </NuxtLink>
   </div>

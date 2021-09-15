@@ -25,7 +25,6 @@ export default {
 <style scoped>
 .container {
   padding: 32px 32px;
-  background-color: var(--greyBackground);
 }
 .two-column {
   display: flex;

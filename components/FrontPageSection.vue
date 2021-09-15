@@ -92,6 +92,21 @@ export default {
   padding: 40px 20px;
 }
 
+.section__image__quoteoverlay h1 {
+  color: var(--quoteOverlay);
+  font-weight: 700;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
+
+.section__image__quoteoverlay p {
+  color: var(--quoteOverlay);
+  font-weight: 700;
+  font-size: 16px;
+ }
+
+
 .section__body {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -112,12 +127,18 @@ export default {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   align-self: start;
+  text-transform: uppercase;
+}
+
+.section__body__heading h1 {
+  margin-top: 0px;
 }
 
 .section__body__body {
   font-size: 20px;
   line-height: 31px;
   font-family: "Open Sans";
+  padding-top: 10px;
 }
 
 .section__components {
@@ -129,8 +150,16 @@ export default {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .section__image__quoteoverlay {
+  .section__image__quoteoverlay  {
+    padding-top: 10px;
+  }
+  .section__image__quoteoverlay h1 {
     font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .section__image__quoteoverlay p {
+    font-size: 10px;
   }
 }
 

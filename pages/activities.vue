@@ -1,7 +1,7 @@
 <template>
   <div v-if="pageContent">
 
-    <MySanityImage class="fullscreen" :image="pageContent.image" :cdn-width="800" :width="$vuetify.breakpoint.width"/>
+    <MySanityImage class="fullscreen" :image="pageContent.image" :cdn-width="1280" :width="$vuetify.breakpoint.width"/>
 
     <SanityContent :blocks="pageContent.intro" class="container body__content"/>
 

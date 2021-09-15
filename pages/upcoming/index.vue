@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <h2>Our Upcoming Pack Activities</h2>
+    <h2>Upcoming Troop Activities</h2>
+
+    <div class="upcoming__content">
+      <SanityContent :blocks="verbiage.upcoming_preamble"/>
+    </div>
 
     <UpcomingActivitiesThumbnails/>
 
@@ -23,6 +27,7 @@ export default {
 
   computed: {
     ...mapState('activities', ['upcoming']),
+    ...mapState('verbiage', ['verbiage']),
   },
 
 }
