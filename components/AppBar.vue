@@ -21,7 +21,7 @@
         <NuxtLink to="/activities">Activities</NuxtLink>
         <NuxtLink to="/recent">Recent</NuxtLink>
         <NuxtLink to="/upcoming">Upcoming</NuxtLink>
-        <a href="mailto:troop284scouting@gmail.com" target="_blank">Contact</a>
+        <a href="mailto:troop284scouting@gmail.com?subject=Troop 284 enquiry" target="_blank">Contact</a>
         <a href="https://www.facebook.com/troop284lafayette/" target="_blank">
           <v-icon>mdi-facebook</v-icon>
         </a>
