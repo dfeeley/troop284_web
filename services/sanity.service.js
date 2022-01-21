@@ -13,7 +13,10 @@ const builder = imageUrlBuilder(client)
 
 const SanityService = {
   fetchRecent: () => {
-    const query = groq`*[_type == "recent"]{
+    let oneYearAgo = new Date();
+    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1)
+    oneYearAgo = oneYearAgo.toISOString().substr(0, 10)
+    const query = groq`*[_type == "recent" && date >= "${oneYearAgo}"]{
       _id,
       name,
       subtitle,
@@ -30,7 +33,8 @@ const SanityService = {
   },
 
   fetchUpcoming: () => {
-    const query = groq`*[_type == "upcoming"]{
+    const today = new Date().toISOString().substr(0, 10);
+    const query = groq`*[_type == "upcoming" && date >= "${today}"]{
       _id,
       name,
       slug,
