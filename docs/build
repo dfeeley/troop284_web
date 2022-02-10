@@ -1,0 +1,1 @@
+pandoc -o troop284-content-howto.odt --reference-doc=reference.odt troop284-content-howto.md  && xdg-open troop284-content-howto.odt
