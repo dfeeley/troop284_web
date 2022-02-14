@@ -60,6 +60,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'vue-scrollto/nuxt',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -70,5 +71,18 @@ export default {
 
   sanity: {
     projectId: 'garjbqnq'
-  }
+  },
+
+//  router: {
+//    async scrollBehavior(to) {
+//      if (to.hash) {
+//        let el = await findEl(to.hash)
+//        if ('scrollBehavior' in document.documentElement.style) {
+//          return window.scrollTo({ top: el.getBoundingClientRect().top+window.scrollY, behavior: 'smooth' })
+//        } else {
+//          return window.scrollTo(0, el.getBoundingClientRect().top+window.scrollY)
+//        }
+//      }
+//    }
+//  }
 }

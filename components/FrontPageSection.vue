@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section__container {
   margin-bottom: 20px;
 }

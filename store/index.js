@@ -10,6 +10,7 @@ export const actions = {
       dispatch('frontpage/load'),
       dispatch('activities/load'),
       dispatch('verbiage/load'),
+      dispatch('eagle/load'),
     ])
   }
 }
