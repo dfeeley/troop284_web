@@ -110,6 +110,7 @@ const SanityService = {
   fetchEaglePageContent: () => {
     const query = groq`*[_type == "eaglePage" && status == "draft"]{
       heading,
+      badge,
       sections,
     }`;
     return client.fetch(query)

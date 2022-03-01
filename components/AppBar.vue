@@ -21,6 +21,22 @@
         <NuxtLink to="/activities">Activities</NuxtLink>
         <NuxtLink to="/recent">Recent</NuxtLink>
         <NuxtLink to="/upcoming">Upcoming</NuxtLink>
+
+        <v-menu :open-on-hover="true" offset-y transition="slide-x-transition" bottom right>
+          <template v-slot:activator="{ on }">
+            <div>
+              <v-btn text v-on="on">Resources</v-btn>
+            </div>
+          </template>
+          <v-list>
+            <v-list-item>
+              <NuxtLink to="/eagle">
+                <v-list-item-title>Path to Eagle</v-list-item-title>
+              </NuxtLink>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
         <a href="mailto:troop284scouting@gmail.com?subject=Troop%20284%20enquiry">Contact</a>
         <a href="https://www.facebook.com/troop284lafayette/" target="_blank">
           <v-icon>mdi-facebook</v-icon>
@@ -53,6 +69,14 @@
             </v-list-item>
 
             <v-list-item to="upcoming">
+              <v-list-item-title>Upcoming</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item to="/eagle">
+              <v-list-item-title>Path to Eagle</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
               <v-list-item-title>Upcoming</v-list-item-title>
             </v-list-item>
 
@@ -102,13 +126,17 @@ export default {
   align-items: center;
 }
 
-.toolbar-items-container a {
+.toolbar-items-container a,
+.toolbar-items-container button.v-btn.v-btn--text,
+.v-menu__content a {
   font-family: "Maven Pro";
   text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 0px 15px
+  padding: 0px 15px;
+  color: #999999;
+  letter-spacing: normal;
 }
 
 @media (max-width: 600px) {
