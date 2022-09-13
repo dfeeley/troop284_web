@@ -29,6 +29,11 @@
             </div>
           </template>
           <v-list>
+            <v-list-item v-for="page in knowledgeCenterPages" :key="page._id">
+              <NuxtLink :to="`/knowledge/${page.slug.current}`">
+                <v-list-item-title>{{ page.name }}</v-list-item-title>
+              </NuxtLink>
+            </v-list-item>
             <v-list-item>
               <NuxtLink to="/eagle">
                 <v-list-item-title>Path to Eagle</v-list-item-title>
@@ -90,6 +95,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'AppBar',
 
@@ -100,6 +107,8 @@ export default {
   },
 
   computed: {
+    ...mapState('knowledgeCenter', ['knowledgeCenterPages']),
+
     isMobile() {
       return this.$vuetify.breakpoint.smAndDown
     },

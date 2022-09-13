@@ -93,6 +93,18 @@ const SanityService = {
     return client.fetch(query)
   },
 
+  fetchKnowlegeCenterPages: () => {
+    const query = groq`*[_type == "knowledgeCenterPage" && status == "final"]{
+      _id,
+      name,
+      slug,
+      heading,
+      body,
+      components
+    } | order(sortOrder)`;
+    return client.fetch(query)
+  },
+
   fetchEaglePageSections: () => {
     const query = groq`*[_type == "eaglePageSection"]{
       _id,

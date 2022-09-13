@@ -11,6 +11,7 @@ export const actions = {
       dispatch('activities/load'),
       dispatch('verbiage/load'),
       dispatch('eagle/load'),
+      dispatch('knowledgeCenter/load'),
     ])
   }
 }
