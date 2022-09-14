@@ -32,6 +32,10 @@ export default {
     ]
   },
 
+  generate: {
+    fallback: true
+  },
+
   env: {
     GOOGLE_MAPS_APIKEY: process.env.GOOGLE_MAPS_APIKEY
   },
