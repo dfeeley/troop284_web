@@ -73,16 +73,16 @@
               <v-list-item-title>Recent</v-list-item-title>
             </v-list-item>
 
-            <v-list-item to="upcoming">
+            <v-list-item to="/upcoming">
               <v-list-item-title>Upcoming</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item v-for="page in knowledgeCenterPages" :key="page._id" :to="`/knowledge/${page.slug.current}`">
+              <v-list-item-title>{{ page.name }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item to="/eagle">
               <v-list-item-title>Path to Eagle</v-list-item-title>
-            </v-list-item>
-
-            <v-list-item>
-              <v-list-item-title>Upcoming</v-list-item-title>
             </v-list-item>
 
             <v-list-item href="mailto:troop284scouting@gmail.com" target="_blank">
