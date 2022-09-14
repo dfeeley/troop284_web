@@ -4,8 +4,8 @@
 
     <ul>
       <li>
-        <NuxtLink 
-          v-for="page in knowledgeCenterPages" 
+        <NuxtLink
+          v-for="page in knowledgeCenterPages"
           :key="page._id"
 <<<<<<< HEAD
           :to="`/knowledge/${page.slug}`"
