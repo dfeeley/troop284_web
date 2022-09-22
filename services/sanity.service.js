@@ -105,6 +105,15 @@ const SanityService = {
     return client.fetch(query)
   },
 
+  fetchDocumentLibraryLinks: () => {
+    const query = groq`*[_type == "documentLibraryLinks"]{
+      _id,
+      title,
+      url,
+    } | order(sortOrder)`;
+    return client.fetch(query)
+  },
+
   fetchEaglePageSections: () => {
     const query = groq`*[_type == "eaglePageSection"]{
       _id,

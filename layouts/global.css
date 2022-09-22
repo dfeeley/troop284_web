@@ -4,7 +4,8 @@
   --activityOverlay: white;
   --greyBackground: rgb(244, 247, 248);
   --activeLink: #28657c;
-  --normalLink: #999999
+  --normalLink: #999999;
+  --highlightLink: #28657c;
 }
 
 html {
@@ -42,6 +43,12 @@ h4 {
 
 .v-application a {
 	color: var(--normalLink);
+}
+
+.v-application a.document {
+	color: var(--header);
+  font-size: 1.4em;
+  text-decoration: none;
 }
 
 .v-application a.nuxt-link-exact-active {
