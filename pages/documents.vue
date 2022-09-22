@@ -1,5 +1,5 @@
 <template>
-  <div class="document_library">
+  <div class="container">
     <h2>Troop 284 Document Library</h2>
     <div class="document_library_content">
 

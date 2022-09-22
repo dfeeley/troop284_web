@@ -8,6 +8,7 @@
           v-for="page in knowledgeCenterPages"
           :key="page._id"
           :to="`/knowledge/${page.slug.current}`"
+          class="document"
         >{{ page.name }}
         </NuxtLink>
       </li>

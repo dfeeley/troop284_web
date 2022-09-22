@@ -90,6 +90,12 @@
               <v-list-item-title>{{ page.name }}</v-list-item-title>
             </v-list-item>
 
+            <v-list-item v-for="link in documentLibraryLinks" :key="link._id">
+              <a :href="link.url" target="_blank">
+                <v-list-item-title>{{ link.title }}</v-list-item-title>
+              </a>
+            </v-list-item>
+
             <v-list-item to="/eagle">
               <v-list-item-title>Path to Eagle</v-list-item-title>
             </v-list-item>
