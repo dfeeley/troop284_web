@@ -13,6 +13,7 @@ export const actions = {
       dispatch('eagle/load'),
       dispatch('knowledgeCenter/load'),
       dispatch('documentLibrary/load'),
+      dispatch('bookmarks/load'),
     ])
   }
 }

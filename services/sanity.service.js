@@ -110,7 +110,18 @@ const SanityService = {
       _id,
       title,
       url,
-    } | order(sortOrder)`;
+      sortOrder,
+    } | order(sortOrder asc)`;
+    return client.fetch(query)
+  },
+
+  fetchBookmarks: () => {
+    const query = groq`*[_type == "bookmarks"]{
+      _id,
+      title,
+      url,
+      sortOrder,
+    } | order(sortOrder asc)`;
     return client.fetch(query)
   },
 

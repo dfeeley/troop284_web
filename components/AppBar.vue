@@ -29,18 +29,11 @@
             </div>
           </template>
           <v-list>
-            <!-- knowledge center pages -->
-            <v-list-item v-for="page in knowledgeCenterPages" :key="page._id">
-              <NuxtLink :to="`/knowledge/${page.slug.current}`">
-                <v-list-item-title>{{ page.name }}</v-list-item-title>
-              </NuxtLink>
-            </v-list-item>
 
-            <!-- document library links -->
-            <v-list-item v-for="link in documentLibraryLinks" :key="link._id">
-              <a :href="link.url" target="_blank">
-                <v-list-item-title>{{ link.title }}</v-list-item-title>
-              </a>
+            <v-list-item>
+              <NuxtLink to="/links">
+                <v-list-item-title>Documents / Links</v-list-item-title>
+              </NuxtLink>
             </v-list-item>
 
             <v-list-item>
@@ -86,14 +79,8 @@
               <v-list-item-title>Upcoming</v-list-item-title>
             </v-list-item>
 
-            <v-list-item v-for="page in knowledgeCenterPages" :key="page._id" :to="`/knowledge/${page.slug.current}`">
-              <v-list-item-title>{{ page.name }}</v-list-item-title>
-            </v-list-item>
-
-            <v-list-item v-for="link in documentLibraryLinks" :key="link._id">
-              <a :href="link.url" target="_blank">
-                <v-list-item-title>{{ link.title }}</v-list-item-title>
-              </a>
+            <v-list-item to="/links">
+              <v-list-item-title>Documents / Links</v-list-item-title>
             </v-list-item>
 
             <v-list-item to="/eagle">
