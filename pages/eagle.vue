@@ -29,7 +29,7 @@ import { mapState, mapGetters } from 'vuex'
 
 export default {
   head: {
-    titleTemplate: '%s - Home'
+    titleTemplate: '%s - Path To Eagle'
   },
 
   computed: {
