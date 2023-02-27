@@ -6,7 +6,7 @@
 
 export default {
   head: {
-    titleTemplate: '%s - Activities Database'
+    titleTemplate: '%s - Troop History'
   },
 }
 </script>

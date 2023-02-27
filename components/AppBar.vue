@@ -43,8 +43,8 @@
             </v-list-item>
 
             <v-list-item>
-              <NuxtLink to="/activitydb">
-                <v-list-item-title>Activities Database</v-list-item-title>
+              <NuxtLink to="/history">
+                <v-list-item-title>Troop History</v-list-item-title>
               </NuxtLink>
             </v-list-item>
           </v-list>
@@ -93,8 +93,8 @@
               <v-list-item-title>Path to Eagle</v-list-item-title>
             </v-list-item>
 
-            <v-list-item to="/activitydb">
-              <v-list-item-title>Activities Database</v-list-item-title>
+            <v-list-item to="/history">
+              <v-list-item-title>Troop History</v-list-item-title>
             </v-list-item>
 
             <v-list-item href="mailto:troop284scouting@gmail.com" target="_blank">
