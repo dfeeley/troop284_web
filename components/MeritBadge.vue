@@ -4,15 +4,19 @@
     <a :href="requirements_url">
       <img :src="thumbnail"/>
     </a>
-    <div class="meritbadge__name">{{ badge.name }}</div>
+    <div class="meritbadge__name">
+      <a :href="requirements_url">
+      {{ badge.name }}
+      </a>
+    </div>
     <div class="meritbadge__links">
       <div>
         <a :href="requirements_url" target="_blank">Reqs</a>
       </div>
-      <div>
+      <div v-if="badge.pamphlet_url" >
         <a v-if="badge.pamphlet_url" :href="badge.pamphlet_url" target="_blank">Pamphlet</a>
       </div>
-      <div>
+      <div v-if="badge.workbook_url" >
         <a v-if="badge.workbook_url" :href="badge.workbook_url" target="_blank">Workbook</a>
       </div>
     </div>
@@ -48,6 +52,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  width: 225px;
 }
 
 .meritbadge__container img {
@@ -59,15 +64,29 @@ export default {
   font-weight: bold;
 }
 
+.meritbadge__name a {
+  color: var(--header);
+  text-decoration: none;
+}
+
 .meritbadge__links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .meritbadge__links div {
-  width: 100%;
+  width: 33%;
   text-align: center;
+  font-size: 0.8em;
   padding: 0px 10px;
 }
+
+.meritbadge__links a  {
+  color: var(--header);
+  font-weight: bold;
+}
+
 
 </style>

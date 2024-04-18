@@ -35,4 +35,5 @@ export default {
   padding: 0px 10px;
 }
 
+
 </style>
