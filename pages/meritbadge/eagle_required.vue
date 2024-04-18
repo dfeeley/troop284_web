@@ -20,7 +20,7 @@
       />
     </div>
 
-    <h3>Optional Merit Badges</h3>
+    <h3>Elective Merit Badges</h3>
     <MeritBadgeList
         :badges="notEagleRequired"
     />
