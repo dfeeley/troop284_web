@@ -23,7 +23,7 @@
         <NuxtLink to="/upcoming">Upcoming</NuxtLink>
 
         <v-menu :open-on-hover="true" offset-y transition="slide-x-transition" bottom right>
-          <template v-slot:activator="{ on }">
+          <template #activator="{ on }">
             <div>
               <v-btn text v-on="on">Resources</v-btn>
             </div>
@@ -33,6 +33,12 @@
             <v-list-item>
               <NuxtLink to="/links">
                 <v-list-item-title>Documents / Links</v-list-item-title>
+              </NuxtLink>
+            </v-list-item>
+
+            <v-list-item>
+              <NuxtLink to="/meritbadge">
+                <v-list-item-title>Merit Badge Library</v-list-item-title>
               </NuxtLink>
             </v-list-item>
 

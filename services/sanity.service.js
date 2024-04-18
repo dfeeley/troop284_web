@@ -125,6 +125,21 @@ const SanityService = {
     return client.fetch(query)
   },
 
+  fetchMeritBadges: () => {
+    const query = groq`*[_type == "meritbadge"]{
+      _id,
+      name,
+      slug,
+      eagle_required,
+      eagle_alternates,
+      workbook_url,
+      pamphlet_url,
+      override_image_url,
+      override_requirements_url,
+    } | order(name asc)`;
+    return client.fetch(query)
+  },
+
   fetchEaglePageSections: () => {
     const query = groq`*[_type == "eaglePageSection"]{
       _id,
@@ -152,6 +167,8 @@ const SanityService = {
     const query = groq`*[_type == "verbiage" && status == "final"]{
       recent_preamble,
       upcoming_preamble,
+      merit_badge_preamble,
+      merit_badge_eagle_preamble
     }`;
     return client.fetch(query)
   },

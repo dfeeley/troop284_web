@@ -14,6 +14,7 @@ export const actions = {
       dispatch('knowledgeCenter/load'),
       dispatch('documentLibrary/load'),
       dispatch('bookmarks/load'),
+      dispatch('meritbadges/load'),
     ])
   }
 }
