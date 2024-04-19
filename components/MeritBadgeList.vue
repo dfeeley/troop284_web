@@ -26,6 +26,12 @@ export default {
   flex-wrap: wrap;
 }
 
+@media (max-width: 500px) {
+  .meritbadgelist__container {
+    margin: auto;
+    justify-content: center;
+  }
+}
 </style>
 
 
