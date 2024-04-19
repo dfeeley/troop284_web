@@ -95,6 +95,10 @@
               <v-list-item-title>Documents / Links</v-list-item-title>
             </v-list-item>
 
+            <v-list-item to="/meritbadge">
+              <v-list-item-title>Merit Badges</v-list-item-title>
+            </v-list-item>
+
             <v-list-item to="/eagle">
               <v-list-item-title>Path to Eagle</v-list-item-title>
             </v-list-item>
