@@ -8,6 +8,7 @@
     <h3>Eagle Required Merit Badges</h3>
     <MeritBadgeList
         :badges="eagleRequiredNoAlternates"
+        :showFilter="false"
     />
     <div
       v-for="group in eagleRequiredAlternateGroups"
@@ -17,6 +18,7 @@
       <span>Choose one of:</span>
       <MeritBadgeList
          :badges="group"
+         :showFilter="false"
       />
     </div>
 
