@@ -1,11 +1,11 @@
 <template>
   <div class="meritbadge__container">
 
-    <a :href="requirements_url">
+    <a :href="requirements_url" target="_blank">
       <img :src="thumbnail"/>
     </a>
     <div class="meritbadge__name">
-      <a :href="requirements_url">
+      <a :href="requirements_url" target="_blank">
       {{ badge.name }}
       </a>
     </div>
