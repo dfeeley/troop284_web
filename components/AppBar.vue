@@ -37,6 +37,12 @@
             </v-list-item>
 
             <v-list-item>
+              <NuxtLink to="/calendar">
+                <v-list-item-title>Troop Calendar</v-list-item-title>
+              </NuxtLink>
+            </v-list-item>
+
+            <v-list-item>
               <NuxtLink to="/meritbadge">
                 <v-list-item-title>Merit Badge Library</v-list-item-title>
               </NuxtLink>
