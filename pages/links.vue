@@ -28,10 +28,8 @@
 
     <h2>Knowledge Center Pages</h2>
     <ul>
-      <li>
+      <li v-for="page in knowledgeCenterPages" :key="page._id">
         <NuxtLink
-          v-for="page in knowledgeCenterPages"
-          :key="page._id"
           :to="`/knowledge/${page.slug.current}`"
           class="document"
         >{{ page.name }}
