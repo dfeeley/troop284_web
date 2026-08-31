@@ -62,7 +62,7 @@
           </v-list>
         </v-menu>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeHo0sN_HUHnkpq6YC-tHTV9WC6k3VTTdV2lx7ZQ82VpCNww/viewform?pli=1">Contact</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeHo0sN_HUHnkpq6YC-tHTV9WC6k3VTTdV2lx7ZQ82VpCNww/viewform?pli=1" target="_blank">Contact</a>
         <a href="https://www.facebook.com/troop284lafayette/" target="_blank">
           <v-icon>mdi-facebook</v-icon>
         </a>
