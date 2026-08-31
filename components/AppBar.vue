@@ -62,7 +62,7 @@
           </v-list>
         </v-menu>
 
-        <a href="mailto:troop284scouting@gmail.com?subject=Troop%20284%20enquiry">Contact</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeHo0sN_HUHnkpq6YC-tHTV9WC6k3VTTdV2lx7ZQ82VpCNww/viewform?pli=1">Contact</a>
         <a href="https://www.facebook.com/troop284lafayette/" target="_blank">
           <v-icon>mdi-facebook</v-icon>
         </a>
@@ -113,7 +113,7 @@
               <v-list-item-title>Troop History</v-list-item-title>
             </v-list-item>
 
-            <v-list-item href="mailto:troop284scouting@gmail.com" target="_blank">
+            <v-list-item href="https://docs.google.com/forms/d/e/1FAIpQLSdeHo0sN_HUHnkpq6YC-tHTV9WC6k3VTTdV2lx7ZQ82VpCNww/viewform?pli=1" target="_blank">
               <v-list-item-title>Contact</v-list-item-title>
             </v-list-item>
         </v-list-item-group>
