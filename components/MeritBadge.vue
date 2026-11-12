@@ -16,8 +16,8 @@
       <div>
         <a :href="pamphlet_url" target="_blank">Pamphlet</a>
       </div>
-      <div v-if="badge.workbook_url" >
-        <a v-if="badge.workbook_url" :href="badge.workbook_url" target="_blank">Workbook</a>
+      <div>
+        <a :href="workbook_url" target="_blank">Workbook</a>
       </div>
     </div>
   </div>
@@ -35,16 +35,24 @@ export default {
   },
   computed: {
     ...mapGetters('meritbadges', ['forSlug']),
+
     thumbnail() {
-      return this.badge.override_image_url === "" ? `https://scoutmasterbucky.com/merit-badges/${this.badge.slug.current}/${this.badge.slug.current}.png` : this.badge.override_image_url
+      const override = this.badge.override_image_url;
+      return (override === null || override === "" ) ? `https://scoutmasterbucky.com/merit-badges/${this.badge.slug.current}/${this.badge.slug.current}.png` : override
     },
+
     requirements_url() {
       return `https://www.scouting.org/merit-badges/${this.badge.slug.current}/`
     },
+
     pamphlet_url() {
-      return this.badge.pamphlet_url === "" ? `https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Pamphlets/${this.badge.name}.pdf` : this.badge.pamphlet_url
-    }
-  },
+      const override = this.badge.pamphlet_url;
+      return (override === null || override === "") ? `https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Pamphlets/${this.badge.name}.pdf` : override
+    },
+    workbook_url() {
+      const override = this.badge.workbook_url;
+      return (override === null || override === "") ? `https://filestore.scoutmasterbucky.com/merit-badges/${this.badge.slug.current}/${this.badge.slug.current}-workbook.pdf` : override
+    },  },
 }
 </script>
 
