@@ -13,8 +13,8 @@
       <div>
         <a :href="requirements_url" target="_blank">Reqs</a>
       </div>
-      <div v-if="badge.pamphlet_url" >
-        <a v-if="badge.pamphlet_url" :href="badge.pamphlet_url" target="_blank">Pamphlet</a>
+      <div>
+        <a :href="pamphlet_url" target="_blank">Pamphlet</a>
       </div>
       <div v-if="badge.workbook_url" >
         <a v-if="badge.workbook_url" :href="badge.workbook_url" target="_blank">Workbook</a>
@@ -41,6 +41,9 @@ export default {
     requirements_url() {
       return `https://www.scouting.org/merit-badges/${this.badge.slug.current}/`
     },
+    pamphlet_url() {
+      return this.badge.pamphlet_url === "" ? `https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Pamphlets/${this.badge.name}.pdf` : this.badge.pamphlet_url
+    }
   },
 }
 </script>
