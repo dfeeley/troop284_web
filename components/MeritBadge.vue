@@ -36,7 +36,7 @@ export default {
   computed: {
     ...mapGetters('meritbadges', ['forSlug']),
     thumbnail() {
-      return `https://scoutmasterbucky.com/merit-badges/${this.badge.slug.current}/${this.badge.slug.current}.png`
+      return this.badge.override_image_url === "" ? `https://scoutmasterbucky.com/merit-badges/${this.badge.slug.current}/${this.badge.slug.current}.png` : this.badge.override_image_url
     },
     requirements_url() {
       return `https://www.scouting.org/merit-badges/${this.badge.slug.current}/`
